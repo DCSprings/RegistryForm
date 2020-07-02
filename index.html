@@ -72,14 +72,19 @@
                 height: 30px;
             }
         </style>
-      
+        <script>
+            function congrats(){
+                window.alert("Reservation Succesful! See you Soon!")
+                event.preventDefault();
+            }
+        </script>
     </head>
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <div id="main">
             <h1 id="title">Reservations</h1>
             <p id="description">Please be our guest!</p> 
-            <form id="survey-form">
+            <form id="survey-form" onsubmit="congrats()"><!--to be changed to event listener-->
                 <div>
                     <label id="name-label" for="name">Name</label>
                     <input type="text" id="name"  class="fullwidth boxHeight" name="name" placeholder="please enter your name" required>
@@ -103,7 +108,9 @@
                 </div>
                 <fieldset id="datetime">
                     <legend>Please select a date and time</legend>
-                    <input type="date" class="boxHeight"> 
+                    <p>Date</p>
+                    <input type="date" class="boxHeight">
+                    <p>Time</p>
                     <input type="time" class="boxHeight">
                 </fieldset>
                 <fieldset>
