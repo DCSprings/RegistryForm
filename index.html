@@ -2,7 +2,7 @@
     <head>
         <title>FCC: Survey Form</title>
         <style>
-            @media screen and (min-width: 601px){
+            @media screen and (min-width: 801px){
                 body{
                 background-image: url(looseleaf.jpg);
                 background-repeat:no-repeat;
@@ -16,13 +16,14 @@
                 color: white; 
                 }
                 form{
-                    margin-left: 20%;
-                    margin-right: 20%;
+                    margin-left: 25%;
+                    margin-right: 25%;
                 }
             }
-           @media screen and (max-width: 600px){
+           @media screen and (max-width: 800px){
                body{
                 background-image: url(looseleaf_mobile.jpg);
+                background-color: black;
                 background-repeat:no-repeat;
                 background-size: cover;
                 font-size: 1.5em;
@@ -60,10 +61,14 @@
                 width: 96%;
                 margin-left: 2%;
                 margin-right: 2%;
-                background-color:ivory;
+                height: 50px;
+                background-color:rgb(255, 241, 161);
             }
             .fullwidth{
                 width: 100%;
+            }
+            .boxHeight{
+                height: 30px;
             }
         </style>
     </head>
@@ -75,19 +80,19 @@
             <form id="survey-form">
                 <div>
                     <label id="name-label" for="name">Name</label>
-                    <input type="text" id="name"  class="fullwidth" name="name" placeholder="please enter your name" required>
+                    <input type="text" id="name"  class="fullwidth boxHeight" name="name" placeholder="please enter your name" required>
                 </div>
                 <div>
                     <label id="email-label" for="email">E-mail</laebel>
-                    <input type="email" id="email" class="fullwidth" name="email" placeholder="Please enter your E-mail" required>
+                    <input type="email" id="email" class="fullwidth boxHeight" name="email" placeholder="Please enter your E-mail" required>
                 </div>
                 <div>
                     <label id="number-label" for="number">Number in party</label>
-                    <input type="number" id="number" class="fullwidth" name="number" placeholder="Attending" minlength="1" maxlength="2" min="1" max="8" required>
+                    <input type="number" id="number" class="fullwidth boxHeight" name="number" placeholder="Attending" minlength="1" maxlength="2" min="1" max="8" required>
                 </div>
                 <div>
                     <label for="dropdown" id="dropdown-label" class="formfield">Please select desired service</label>
-                    <select name= "dropdown" id="dropdown" class="fullwidth">
+                    <select name= "dropdown" id="dropdown" class="fullwidth boxHeight">
                         <option value="select">Select</option>
                         <option value="sunrise">Sunrise Special</option>
                         <option value="noon">High tea</option>
@@ -96,8 +101,8 @@
                 </div>
                 <fieldset id="datetime">
                     <legend>Please select a date and time</legend>
-                    <input type="date">
-                    <input type="time">
+                    <input type="date" class="boxHeight"> 
+                    <input type="time" class="boxHeight">
                 </fieldset>
                 <fieldset>
                     <legend>Is this your first time visiting?</legend>
